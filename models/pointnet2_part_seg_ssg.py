@@ -17,7 +17,7 @@ class get_model(nn.Module):
         self.sa3 = PointNetSetAbstraction(npoint=None, radius=None, nsample=None, in_channel=256 + 3, mlp=[256, 512, 1024], group_all=True)
         self.fp3 = PointNetFeaturePropagation(in_channel=1280, mlp=[256, 256])
         self.fp2 = PointNetFeaturePropagation(in_channel=384, mlp=[256, 128])
-        self.fp1 = PointNetFeaturePropagation(in_channel=128+16+6+additional_channel, mlp=[128, 128, 128])
+        self.fp1 = PointNetFeaturePropagation(in_channel=128+2+6+additional_channel, mlp=[128, 128, 128])
         self.conv1 = nn.Conv1d(128, 128, 1)
         self.bn1 = nn.BatchNorm1d(128)
         self.drop1 = nn.Dropout(0.5)
@@ -30,17 +30,17 @@ class get_model(nn.Module):
             l0_points = xyz
             l0_xyz = xyz[:,:3,:]
         else:
-            l0_points = xyz
-            l0_xyz = xyz
-        l1_xyz, l1_points = self.sa1(l0_xyz, l0_points)
-        l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
-        l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
+            l0_points = xyz  # (B,3,2048)
+            l0_xyz = xyz  # (B,3,2048)
+        l1_xyz, l1_points = self.sa1(l0_xyz, l0_points)  # (B,3,512)  (B,128,512)
+        l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)  # (B,3,128)  (B,256,128)
+        l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)  # (B,3,1)  (B,1024,1)
         # Feature Propagation layers
-        l2_points = self.fp3(l2_xyz, l3_xyz, l2_points, l3_points)
-        l1_points = self.fp2(l1_xyz, l2_xyz, l1_points, l2_points)
-        cls_label_one_hot = cls_label.view(B,16,1).repeat(1,1,N)
+        l2_points = self.fp3(l2_xyz, l3_xyz, l2_points, l3_points)  # 1024+256=1280  (B,256,128)
+        l1_points = self.fp2(l1_xyz, l2_xyz, l1_points, l2_points)  # 256+128=384  (B,128,512)
+        cls_label_one_hot = cls_label.view(B,2,1).repeat(1,1,N)  # (B,2,2048)
         l0_points = self.fp1(l0_xyz, l1_xyz, torch.cat([cls_label_one_hot,l0_xyz,l0_points],1), l1_points)
-        # FC layers
+        # FC layers  2+3+3+128
         feat =  F.relu(self.bn1(self.conv1(l0_points)))
         x = self.drop1(feat)
         x = self.conv2(x)
