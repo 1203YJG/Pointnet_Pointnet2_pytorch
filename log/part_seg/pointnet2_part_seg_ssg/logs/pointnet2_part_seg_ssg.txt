@@ -1,76 +1,658 @@
-2024-09-18 15:14:46,593 - Model - INFO - PARAMETER ...
-2024-09-18 15:14:46,593 - Model - INFO - Namespace(batch_size=32, decay_rate=0.0001, epoch=150, gpu='0', learning_rate=0.001, log_dir='pointnet2_part_seg_ssg', lr_decay=0.5, model='pointnet2_part_seg_ssg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
-2024-09-18 15:14:46,602 - Model - INFO - The number of training data is: 1024
-2024-09-18 15:14:46,602 - Model - INFO - The number of test data is: 256
-2024-09-18 15:14:48,512 - Model - INFO - No existing model, starting training from scratch...
-2024-09-18 15:14:48,514 - Model - INFO - Epoch 1 (1/150):
-2024-09-18 15:14:48,514 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:15:03,146 - Model - INFO - Train accuracy is: 0.71263
-2024-09-18 15:15:07,697 - Model - INFO - eval mIoU of K              0.268690
-2024-09-18 15:15:07,697 - Model - INFO - eval mIoU of KT             0.123041
-2024-09-18 15:15:07,698 - Model - INFO - Epoch 1 test Accuracy: 0.630182  Class avg mIOU: 0.195866   Inctance avg mIOU: 0.195866
-2024-09-18 15:15:07,698 - Model - INFO - Save model...
-2024-09-18 15:15:07,698 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_ssg/checkpoints/best_model.pth
-2024-09-18 15:15:07,738 - Model - INFO - Saving model....
-2024-09-18 15:15:07,738 - Model - INFO - Best accuracy is: 0.63018
-2024-09-18 15:15:07,738 - Model - INFO - Best class avg mIOU is: 0.19587
-2024-09-18 15:15:07,738 - Model - INFO - Best inctance avg mIOU is: 0.19587
-2024-09-18 15:15:07,738 - Model - INFO - Epoch 2 (2/150):
-2024-09-18 15:15:07,738 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:15:22,369 - Model - INFO - Train accuracy is: 0.88202
-2024-09-18 15:15:26,858 - Model - INFO - eval mIoU of K              0.621676
-2024-09-18 15:15:26,859 - Model - INFO - eval mIoU of KT             0.733810
-2024-09-18 15:15:26,859 - Model - INFO - Epoch 2 test Accuracy: 0.844484  Class avg mIOU: 0.677743   Inctance avg mIOU: 0.677743
-2024-09-18 15:15:26,859 - Model - INFO - Save model...
-2024-09-18 15:15:26,860 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_ssg/checkpoints/best_model.pth
-2024-09-18 15:15:26,902 - Model - INFO - Saving model....
-2024-09-18 15:15:26,902 - Model - INFO - Best accuracy is: 0.84448
-2024-09-18 15:15:26,902 - Model - INFO - Best class avg mIOU is: 0.67774
-2024-09-18 15:15:26,902 - Model - INFO - Best inctance avg mIOU is: 0.67774
-2024-09-18 15:15:26,902 - Model - INFO - Epoch 3 (3/150):
-2024-09-18 15:15:26,902 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:15:41,753 - Model - INFO - Train accuracy is: 0.91190
-2024-09-18 15:15:46,218 - Model - INFO - eval mIoU of K              0.439328
-2024-09-18 15:15:46,219 - Model - INFO - eval mIoU of KT             0.559963
-2024-09-18 15:15:46,219 - Model - INFO - Epoch 3 test Accuracy: 0.771082  Class avg mIOU: 0.499646   Inctance avg mIOU: 0.499646
-2024-09-18 15:15:46,219 - Model - INFO - Best accuracy is: 0.84448
-2024-09-18 15:15:46,219 - Model - INFO - Best class avg mIOU is: 0.67774
-2024-09-18 15:15:46,219 - Model - INFO - Best inctance avg mIOU is: 0.67774
-2024-09-18 15:15:46,219 - Model - INFO - Epoch 4 (4/150):
-2024-09-18 15:15:46,219 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:16:00,776 - Model - INFO - Train accuracy is: 0.94377
-2024-09-18 15:16:05,350 - Model - INFO - eval mIoU of K              0.619767
-2024-09-18 15:16:05,350 - Model - INFO - eval mIoU of KT             0.634859
-2024-09-18 15:16:05,350 - Model - INFO - Epoch 4 test Accuracy: 0.834677  Class avg mIOU: 0.627313   Inctance avg mIOU: 0.627313
-2024-09-18 15:16:05,350 - Model - INFO - Best accuracy is: 0.84448
-2024-09-18 15:16:05,350 - Model - INFO - Best class avg mIOU is: 0.67774
-2024-09-18 15:16:05,350 - Model - INFO - Best inctance avg mIOU is: 0.67774
-2024-09-18 15:16:05,350 - Model - INFO - Epoch 5 (5/150):
-2024-09-18 15:16:05,351 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:16:19,856 - Model - INFO - Train accuracy is: 0.94784
-2024-09-18 15:16:24,367 - Model - INFO - eval mIoU of K              0.476232
-2024-09-18 15:16:24,367 - Model - INFO - eval mIoU of KT             0.770878
-2024-09-18 15:16:24,368 - Model - INFO - Epoch 5 test Accuracy: 0.847679  Class avg mIOU: 0.623555   Inctance avg mIOU: 0.623555
-2024-09-18 15:16:24,368 - Model - INFO - Best accuracy is: 0.84768
-2024-09-18 15:16:24,368 - Model - INFO - Best class avg mIOU is: 0.67774
-2024-09-18 15:16:24,368 - Model - INFO - Best inctance avg mIOU is: 0.67774
-2024-09-18 15:16:24,368 - Model - INFO - Epoch 6 (6/150):
-2024-09-18 15:16:24,368 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:16:39,055 - Model - INFO - Train accuracy is: 0.95308
-2024-09-18 15:16:43,544 - Model - INFO - eval mIoU of K              0.486319
-2024-09-18 15:16:43,544 - Model - INFO - eval mIoU of KT             0.696046
-2024-09-18 15:16:43,544 - Model - INFO - Epoch 6 test Accuracy: 0.818472  Class avg mIOU: 0.591182   Inctance avg mIOU: 0.591182
-2024-09-18 15:16:43,544 - Model - INFO - Best accuracy is: 0.84768
-2024-09-18 15:16:43,544 - Model - INFO - Best class avg mIOU is: 0.67774
-2024-09-18 15:16:43,545 - Model - INFO - Best inctance avg mIOU is: 0.67774
-2024-09-18 15:16:43,545 - Model - INFO - Epoch 7 (7/150):
-2024-09-18 15:16:43,545 - Model - INFO - Learning rate:0.001000
-2024-09-18 15:16:58,223 - Model - INFO - Train accuracy is: 0.95732
-2024-09-18 15:17:02,776 - Model - INFO - eval mIoU of K              0.433268
-2024-09-18 15:17:02,776 - Model - INFO - eval mIoU of KT             0.741942
-2024-09-18 15:17:02,776 - Model - INFO - Epoch 7 test Accuracy: 0.828386  Class avg mIOU: 0.587605   Inctance avg mIOU: 0.587605
-2024-09-18 15:17:02,777 - Model - INFO - Best accuracy is: 0.84768
-2024-09-18 15:17:02,777 - Model - INFO - Best class avg mIOU is: 0.67774
-2024-09-18 15:17:02,777 - Model - INFO - Best inctance avg mIOU is: 0.67774
-2024-09-18 15:17:02,777 - Model - INFO - Epoch 8 (8/150):
-2024-09-18 15:17:02,777 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:55:04,847 - Model - INFO - PARAMETER ...
+2024-09-18 17:55:04,847 - Model - INFO - Namespace(batch_size=32, decay_rate=0.0001, epoch=100, gpu='0', learning_rate=0.001, log_dir='pointnet2_part_seg_ssg', lr_decay=0.5, model='pointnet2_part_seg_ssg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2024-09-18 17:55:04,896 - Model - INFO - The number of training data is: 768
+2024-09-18 17:55:04,896 - Model - INFO - The number of test data is: 64
+2024-09-18 17:55:07,156 - Model - INFO - No existing model, starting training from scratch...
+2024-09-18 17:55:07,158 - Model - INFO - Epoch 1 (1/100):
+2024-09-18 17:55:07,158 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:55:23,378 - Model - INFO - Train accuracy is: 0.65605
+2024-09-18 17:55:26,534 - Model - INFO - eval mIoU of K              0.244843
+2024-09-18 17:55:26,534 - Model - INFO - eval mIoU of KT             0.137159
+2024-09-18 17:55:26,535 - Model - INFO - Epoch 1 test Accuracy: 0.536552  Class avg mIOU: 0.191001   Inctance avg mIOU: 0.191001
+2024-09-18 17:55:26,535 - Model - INFO - Save model...
+2024-09-18 17:55:26,535 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_ssg/checkpoints/best_model.pth
+2024-09-18 17:55:26,609 - Model - INFO - Saving model....
+2024-09-18 17:55:26,609 - Model - INFO - Best accuracy is: 0.53655
+2024-09-18 17:55:26,609 - Model - INFO - Best class avg mIOU is: 0.19100
+2024-09-18 17:55:26,609 - Model - INFO - Best inctance avg mIOU is: 0.19100
+2024-09-18 17:55:26,609 - Model - INFO - Epoch 2 (2/100):
+2024-09-18 17:55:26,609 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:55:38,227 - Model - INFO - Train accuracy is: 0.86787
+2024-09-18 17:55:40,974 - Model - INFO - eval mIoU of K              0.583548
+2024-09-18 17:55:40,974 - Model - INFO - eval mIoU of KT             0.452119
+2024-09-18 17:55:40,975 - Model - INFO - Epoch 2 test Accuracy: 0.774010  Class avg mIOU: 0.517834   Inctance avg mIOU: 0.517834
+2024-09-18 17:55:40,975 - Model - INFO - Save model...
+2024-09-18 17:55:40,975 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_ssg/checkpoints/best_model.pth
+2024-09-18 17:55:41,076 - Model - INFO - Saving model....
+2024-09-18 17:55:41,076 - Model - INFO - Best accuracy is: 0.77401
+2024-09-18 17:55:41,076 - Model - INFO - Best class avg mIOU is: 0.51783
+2024-09-18 17:55:41,076 - Model - INFO - Best inctance avg mIOU is: 0.51783
+2024-09-18 17:55:41,076 - Model - INFO - Epoch 3 (3/100):
+2024-09-18 17:55:41,076 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:55:52,690 - Model - INFO - Train accuracy is: 0.90874
+2024-09-18 17:55:55,418 - Model - INFO - eval mIoU of K              0.710631
+2024-09-18 17:55:55,418 - Model - INFO - eval mIoU of KT             0.840691
+2024-09-18 17:55:55,419 - Model - INFO - Epoch 3 test Accuracy: 0.922920  Class avg mIOU: 0.775661   Inctance avg mIOU: 0.775661
+2024-09-18 17:55:55,419 - Model - INFO - Save model...
+2024-09-18 17:55:55,419 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_ssg/checkpoints/best_model.pth
+2024-09-18 17:55:55,573 - Model - INFO - Saving model....
+2024-09-18 17:55:55,573 - Model - INFO - Best accuracy is: 0.92292
+2024-09-18 17:55:55,573 - Model - INFO - Best class avg mIOU is: 0.77566
+2024-09-18 17:55:55,573 - Model - INFO - Best inctance avg mIOU is: 0.77566
+2024-09-18 17:55:55,573 - Model - INFO - Epoch 4 (4/100):
+2024-09-18 17:55:55,573 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:56:07,678 - Model - INFO - Train accuracy is: 0.91845
+2024-09-18 17:56:10,718 - Model - INFO - eval mIoU of K              0.775738
+2024-09-18 17:56:10,718 - Model - INFO - eval mIoU of KT             0.763154
+2024-09-18 17:56:10,719 - Model - INFO - Epoch 4 test Accuracy: 0.919456  Class avg mIOU: 0.769446   Inctance avg mIOU: 0.769446
+2024-09-18 17:56:10,719 - Model - INFO - Best accuracy is: 0.92292
+2024-09-18 17:56:10,719 - Model - INFO - Best class avg mIOU is: 0.77566
+2024-09-18 17:56:10,719 - Model - INFO - Best inctance avg mIOU is: 0.77566
+2024-09-18 17:56:10,719 - Model - INFO - Epoch 5 (5/100):
+2024-09-18 17:56:10,719 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:56:22,158 - Model - INFO - Train accuracy is: 0.93071
+2024-09-18 17:56:24,894 - Model - INFO - eval mIoU of K              0.602241
+2024-09-18 17:56:24,895 - Model - INFO - eval mIoU of KT             0.835933
+2024-09-18 17:56:24,895 - Model - INFO - Epoch 5 test Accuracy: 0.849785  Class avg mIOU: 0.719087   Inctance avg mIOU: 0.719087
+2024-09-18 17:56:24,895 - Model - INFO - Best accuracy is: 0.92292
+2024-09-18 17:56:24,895 - Model - INFO - Best class avg mIOU is: 0.77566
+2024-09-18 17:56:24,895 - Model - INFO - Best inctance avg mIOU is: 0.77566
+2024-09-18 17:56:24,896 - Model - INFO - Epoch 6 (6/100):
+2024-09-18 17:56:24,896 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:56:36,652 - Model - INFO - Train accuracy is: 0.93938
+2024-09-18 17:56:39,397 - Model - INFO - eval mIoU of K              0.678703
+2024-09-18 17:56:39,398 - Model - INFO - eval mIoU of KT             0.808887
+2024-09-18 17:56:39,398 - Model - INFO - Epoch 6 test Accuracy: 0.898376  Class avg mIOU: 0.743795   Inctance avg mIOU: 0.743795
+2024-09-18 17:56:39,398 - Model - INFO - Best accuracy is: 0.92292
+2024-09-18 17:56:39,398 - Model - INFO - Best class avg mIOU is: 0.77566
+2024-09-18 17:56:39,398 - Model - INFO - Best inctance avg mIOU is: 0.77566
+2024-09-18 17:56:39,398 - Model - INFO - Epoch 7 (7/100):
+2024-09-18 17:56:39,399 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:56:51,300 - Model - INFO - Train accuracy is: 0.94780
+2024-09-18 17:56:54,016 - Model - INFO - eval mIoU of K              0.753458
+2024-09-18 17:56:54,016 - Model - INFO - eval mIoU of KT             0.843616
+2024-09-18 17:56:54,017 - Model - INFO - Epoch 7 test Accuracy: 0.925873  Class avg mIOU: 0.798537   Inctance avg mIOU: 0.798537
+2024-09-18 17:56:54,017 - Model - INFO - Save model...
+2024-09-18 17:56:54,017 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_ssg/checkpoints/best_model.pth
+2024-09-18 17:56:54,077 - Model - INFO - Saving model....
+2024-09-18 17:56:54,077 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:56:54,077 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:56:54,077 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:56:54,077 - Model - INFO - Epoch 8 (8/100):
+2024-09-18 17:56:54,077 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:57:05,955 - Model - INFO - Train accuracy is: 0.95325
+2024-09-18 17:57:08,699 - Model - INFO - eval mIoU of K              0.654205
+2024-09-18 17:57:08,699 - Model - INFO - eval mIoU of KT             0.826936
+2024-09-18 17:57:08,699 - Model - INFO - Epoch 8 test Accuracy: 0.889893  Class avg mIOU: 0.740571   Inctance avg mIOU: 0.740571
+2024-09-18 17:57:08,699 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:57:08,699 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:57:08,700 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:57:08,700 - Model - INFO - Epoch 9 (9/100):
+2024-09-18 17:57:08,700 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:57:20,317 - Model - INFO - Train accuracy is: 0.95801
+2024-09-18 17:57:23,025 - Model - INFO - eval mIoU of K              0.694704
+2024-09-18 17:57:23,026 - Model - INFO - eval mIoU of KT             0.797379
+2024-09-18 17:57:23,026 - Model - INFO - Epoch 9 test Accuracy: 0.894875  Class avg mIOU: 0.746042   Inctance avg mIOU: 0.746042
+2024-09-18 17:57:23,026 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:57:23,026 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:57:23,026 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:57:23,026 - Model - INFO - Epoch 10 (10/100):
+2024-09-18 17:57:23,026 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:57:34,902 - Model - INFO - Train accuracy is: 0.96083
+2024-09-18 17:57:37,626 - Model - INFO - eval mIoU of K              0.672506
+2024-09-18 17:57:37,626 - Model - INFO - eval mIoU of KT             0.833022
+2024-09-18 17:57:37,626 - Model - INFO - Epoch 10 test Accuracy: 0.903130  Class avg mIOU: 0.752764   Inctance avg mIOU: 0.752764
+2024-09-18 17:57:37,627 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:57:37,627 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:57:37,627 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:57:37,627 - Model - INFO - Epoch 11 (11/100):
+2024-09-18 17:57:37,627 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:57:49,267 - Model - INFO - Train accuracy is: 0.95954
+2024-09-18 17:57:52,011 - Model - INFO - eval mIoU of K              0.779644
+2024-09-18 17:57:52,011 - Model - INFO - eval mIoU of KT             0.800148
+2024-09-18 17:57:52,011 - Model - INFO - Epoch 11 test Accuracy: 0.913383  Class avg mIOU: 0.789896   Inctance avg mIOU: 0.789896
+2024-09-18 17:57:52,012 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:57:52,012 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:57:52,012 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:57:52,012 - Model - INFO - Epoch 12 (12/100):
+2024-09-18 17:57:52,012 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:58:03,649 - Model - INFO - Train accuracy is: 0.96130
+2024-09-18 17:58:06,371 - Model - INFO - eval mIoU of K              0.683877
+2024-09-18 17:58:06,372 - Model - INFO - eval mIoU of KT             0.793943
+2024-09-18 17:58:06,373 - Model - INFO - Epoch 12 test Accuracy: 0.883377  Class avg mIOU: 0.738910   Inctance avg mIOU: 0.738910
+2024-09-18 17:58:06,373 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:58:06,373 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:58:06,373 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:58:06,373 - Model - INFO - Epoch 13 (13/100):
+2024-09-18 17:58:06,373 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:58:18,012 - Model - INFO - Train accuracy is: 0.96489
+2024-09-18 17:58:20,789 - Model - INFO - eval mIoU of K              0.698898
+2024-09-18 17:58:20,789 - Model - INFO - eval mIoU of KT             0.815948
+2024-09-18 17:58:20,790 - Model - INFO - Epoch 13 test Accuracy: 0.894737  Class avg mIOU: 0.757423   Inctance avg mIOU: 0.757423
+2024-09-18 17:58:20,790 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:58:20,790 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:58:20,790 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:58:20,790 - Model - INFO - Epoch 14 (14/100):
+2024-09-18 17:58:20,790 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:58:32,733 - Model - INFO - Train accuracy is: 0.96917
+2024-09-18 17:58:35,406 - Model - INFO - eval mIoU of K              0.675543
+2024-09-18 17:58:35,406 - Model - INFO - eval mIoU of KT             0.745796
+2024-09-18 17:58:35,406 - Model - INFO - Epoch 14 test Accuracy: 0.876495  Class avg mIOU: 0.710669   Inctance avg mIOU: 0.710669
+2024-09-18 17:58:35,407 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:58:35,407 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:58:35,407 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:58:35,407 - Model - INFO - Epoch 15 (15/100):
+2024-09-18 17:58:35,407 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:58:47,280 - Model - INFO - Train accuracy is: 0.96815
+2024-09-18 17:58:50,019 - Model - INFO - eval mIoU of K              0.687413
+2024-09-18 17:58:50,020 - Model - INFO - eval mIoU of KT             0.845909
+2024-09-18 17:58:50,020 - Model - INFO - Epoch 15 test Accuracy: 0.904518  Class avg mIOU: 0.766661   Inctance avg mIOU: 0.766661
+2024-09-18 17:58:50,021 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:58:50,021 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:58:50,021 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:58:50,021 - Model - INFO - Epoch 16 (16/100):
+2024-09-18 17:58:50,021 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:59:01,647 - Model - INFO - Train accuracy is: 0.96762
+2024-09-18 17:59:04,394 - Model - INFO - eval mIoU of K              0.665241
+2024-09-18 17:59:04,394 - Model - INFO - eval mIoU of KT             0.828259
+2024-09-18 17:59:04,395 - Model - INFO - Epoch 16 test Accuracy: 0.898300  Class avg mIOU: 0.746750   Inctance avg mIOU: 0.746750
+2024-09-18 17:59:04,395 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:59:04,395 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:59:04,395 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:59:04,395 - Model - INFO - Epoch 17 (17/100):
+2024-09-18 17:59:04,395 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:59:16,258 - Model - INFO - Train accuracy is: 0.97077
+2024-09-18 17:59:19,000 - Model - INFO - eval mIoU of K              0.678001
+2024-09-18 17:59:19,001 - Model - INFO - eval mIoU of KT             0.881846
+2024-09-18 17:59:19,001 - Model - INFO - Epoch 17 test Accuracy: 0.917610  Class avg mIOU: 0.779923   Inctance avg mIOU: 0.779923
+2024-09-18 17:59:19,001 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:59:19,001 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:59:19,001 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:59:19,001 - Model - INFO - Epoch 18 (18/100):
+2024-09-18 17:59:19,001 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:59:30,621 - Model - INFO - Train accuracy is: 0.97213
+2024-09-18 17:59:33,355 - Model - INFO - eval mIoU of K              0.691747
+2024-09-18 17:59:33,356 - Model - INFO - eval mIoU of KT             0.713259
+2024-09-18 17:59:33,356 - Model - INFO - Epoch 18 test Accuracy: 0.874260  Class avg mIOU: 0.702503   Inctance avg mIOU: 0.702503
+2024-09-18 17:59:33,356 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:59:33,356 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:59:33,356 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:59:33,356 - Model - INFO - Epoch 19 (19/100):
+2024-09-18 17:59:33,356 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:59:45,211 - Model - INFO - Train accuracy is: 0.97117
+2024-09-18 17:59:47,930 - Model - INFO - eval mIoU of K              0.653525
+2024-09-18 17:59:47,930 - Model - INFO - eval mIoU of KT             0.800282
+2024-09-18 17:59:47,930 - Model - INFO - Epoch 19 test Accuracy: 0.883423  Class avg mIOU: 0.726904   Inctance avg mIOU: 0.726904
+2024-09-18 17:59:47,930 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 17:59:47,930 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 17:59:47,931 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 17:59:47,931 - Model - INFO - Epoch 20 (20/100):
+2024-09-18 17:59:47,931 - Model - INFO - Learning rate:0.001000
+2024-09-18 17:59:59,498 - Model - INFO - Train accuracy is: 0.97194
+2024-09-18 18:00:02,258 - Model - INFO - eval mIoU of K              0.719246
+2024-09-18 18:00:02,259 - Model - INFO - eval mIoU of KT             0.821691
+2024-09-18 18:00:02,259 - Model - INFO - Epoch 20 test Accuracy: 0.902016  Class avg mIOU: 0.770468   Inctance avg mIOU: 0.770468
+2024-09-18 18:00:02,259 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:00:02,260 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:00:02,260 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:00:02,260 - Model - INFO - Epoch 21 (21/100):
+2024-09-18 18:00:02,260 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:00:13,957 - Model - INFO - Train accuracy is: 0.97481
+2024-09-18 18:00:16,693 - Model - INFO - eval mIoU of K              0.718094
+2024-09-18 18:00:16,693 - Model - INFO - eval mIoU of KT             0.824396
+2024-09-18 18:00:16,694 - Model - INFO - Epoch 21 test Accuracy: 0.899590  Class avg mIOU: 0.771245   Inctance avg mIOU: 0.771245
+2024-09-18 18:00:16,694 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:00:16,694 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:00:16,694 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:00:16,694 - Model - INFO - Epoch 22 (22/100):
+2024-09-18 18:00:16,694 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:00:28,344 - Model - INFO - Train accuracy is: 0.97522
+2024-09-18 18:00:31,071 - Model - INFO - eval mIoU of K              0.670164
+2024-09-18 18:00:31,072 - Model - INFO - eval mIoU of KT             0.800620
+2024-09-18 18:00:31,072 - Model - INFO - Epoch 22 test Accuracy: 0.885689  Class avg mIOU: 0.735392   Inctance avg mIOU: 0.735392
+2024-09-18 18:00:31,072 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:00:31,072 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:00:31,072 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:00:31,072 - Model - INFO - Epoch 23 (23/100):
+2024-09-18 18:00:31,072 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:00:42,849 - Model - INFO - Train accuracy is: 0.97666
+2024-09-18 18:00:45,567 - Model - INFO - eval mIoU of K              0.725194
+2024-09-18 18:00:45,567 - Model - INFO - eval mIoU of KT             0.792066
+2024-09-18 18:00:45,567 - Model - INFO - Epoch 23 test Accuracy: 0.891747  Class avg mIOU: 0.758630   Inctance avg mIOU: 0.758630
+2024-09-18 18:00:45,567 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:00:45,567 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:00:45,567 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:00:45,568 - Model - INFO - Epoch 24 (24/100):
+2024-09-18 18:00:45,568 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:00:57,300 - Model - INFO - Train accuracy is: 0.97837
+2024-09-18 18:00:59,989 - Model - INFO - eval mIoU of K              0.733187
+2024-09-18 18:00:59,990 - Model - INFO - eval mIoU of KT             0.823097
+2024-09-18 18:00:59,990 - Model - INFO - Epoch 24 test Accuracy: 0.901817  Class avg mIOU: 0.778142   Inctance avg mIOU: 0.778142
+2024-09-18 18:00:59,990 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:00:59,990 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:00:59,990 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:00:59,990 - Model - INFO - Epoch 25 (25/100):
+2024-09-18 18:00:59,990 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:01:11,705 - Model - INFO - Train accuracy is: 0.97811
+2024-09-18 18:01:14,395 - Model - INFO - eval mIoU of K              0.699814
+2024-09-18 18:01:14,395 - Model - INFO - eval mIoU of KT             0.824974
+2024-09-18 18:01:14,395 - Model - INFO - Epoch 25 test Accuracy: 0.897041  Class avg mIOU: 0.762394   Inctance avg mIOU: 0.762394
+2024-09-18 18:01:14,395 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:01:14,396 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:01:14,396 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:01:14,396 - Model - INFO - Epoch 26 (26/100):
+2024-09-18 18:01:14,396 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:01:26,225 - Model - INFO - Train accuracy is: 0.97961
+2024-09-18 18:01:29,395 - Model - INFO - eval mIoU of K              0.689443
+2024-09-18 18:01:29,395 - Model - INFO - eval mIoU of KT             0.826029
+2024-09-18 18:01:29,395 - Model - INFO - Epoch 26 test Accuracy: 0.896034  Class avg mIOU: 0.757736   Inctance avg mIOU: 0.757736
+2024-09-18 18:01:29,396 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:01:29,396 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:01:29,396 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:01:29,396 - Model - INFO - Epoch 27 (27/100):
+2024-09-18 18:01:29,396 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:01:41,090 - Model - INFO - Train accuracy is: 0.98002
+2024-09-18 18:01:44,034 - Model - INFO - eval mIoU of K              0.685536
+2024-09-18 18:01:44,035 - Model - INFO - eval mIoU of KT             0.846292
+2024-09-18 18:01:44,035 - Model - INFO - Epoch 27 test Accuracy: 0.902649  Class avg mIOU: 0.765914   Inctance avg mIOU: 0.765914
+2024-09-18 18:01:44,035 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:01:44,035 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:01:44,035 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:01:44,035 - Model - INFO - Epoch 28 (28/100):
+2024-09-18 18:01:44,035 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:01:55,649 - Model - INFO - Train accuracy is: 0.97769
+2024-09-18 18:01:58,357 - Model - INFO - eval mIoU of K              0.700291
+2024-09-18 18:01:58,358 - Model - INFO - eval mIoU of KT             0.830444
+2024-09-18 18:01:58,358 - Model - INFO - Epoch 28 test Accuracy: 0.896759  Class avg mIOU: 0.765367   Inctance avg mIOU: 0.765367
+2024-09-18 18:01:58,358 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:01:58,358 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:01:58,358 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:01:58,358 - Model - INFO - Epoch 29 (29/100):
+2024-09-18 18:01:58,358 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:02:10,052 - Model - INFO - Train accuracy is: 0.97962
+2024-09-18 18:02:12,762 - Model - INFO - eval mIoU of K              0.671128
+2024-09-18 18:02:12,762 - Model - INFO - eval mIoU of KT             0.806072
+2024-09-18 18:02:12,762 - Model - INFO - Epoch 29 test Accuracy: 0.887444  Class avg mIOU: 0.738600   Inctance avg mIOU: 0.738600
+2024-09-18 18:02:12,762 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:02:12,762 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:02:12,762 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:02:12,763 - Model - INFO - Epoch 30 (30/100):
+2024-09-18 18:02:12,763 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:02:24,684 - Model - INFO - Train accuracy is: 0.98173
+2024-09-18 18:02:27,404 - Model - INFO - eval mIoU of K              0.692929
+2024-09-18 18:02:27,404 - Model - INFO - eval mIoU of KT             0.829031
+2024-09-18 18:02:27,404 - Model - INFO - Epoch 30 test Accuracy: 0.897636  Class avg mIOU: 0.760980   Inctance avg mIOU: 0.760980
+2024-09-18 18:02:27,405 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:02:27,405 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:02:27,405 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:02:27,405 - Model - INFO - Epoch 31 (31/100):
+2024-09-18 18:02:27,405 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:02:39,277 - Model - INFO - Train accuracy is: 0.98273
+2024-09-18 18:02:42,011 - Model - INFO - eval mIoU of K              0.670892
+2024-09-18 18:02:42,011 - Model - INFO - eval mIoU of KT             0.823038
+2024-09-18 18:02:42,012 - Model - INFO - Epoch 31 test Accuracy: 0.893196  Class avg mIOU: 0.746965   Inctance avg mIOU: 0.746965
+2024-09-18 18:02:42,012 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:02:42,012 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:02:42,012 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:02:42,012 - Model - INFO - Epoch 32 (32/100):
+2024-09-18 18:02:42,012 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:02:53,728 - Model - INFO - Train accuracy is: 0.98359
+2024-09-18 18:02:56,529 - Model - INFO - eval mIoU of K              0.730089
+2024-09-18 18:02:56,530 - Model - INFO - eval mIoU of KT             0.830562
+2024-09-18 18:02:56,530 - Model - INFO - Epoch 32 test Accuracy: 0.901550  Class avg mIOU: 0.780325   Inctance avg mIOU: 0.780325
+2024-09-18 18:02:56,530 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:02:56,530 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:02:56,530 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:02:56,530 - Model - INFO - Epoch 33 (33/100):
+2024-09-18 18:02:56,530 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:03:08,252 - Model - INFO - Train accuracy is: 0.97920
+2024-09-18 18:03:10,956 - Model - INFO - eval mIoU of K              0.734452
+2024-09-18 18:03:10,957 - Model - INFO - eval mIoU of KT             0.822522
+2024-09-18 18:03:10,957 - Model - INFO - Epoch 33 test Accuracy: 0.901894  Class avg mIOU: 0.778487   Inctance avg mIOU: 0.778487
+2024-09-18 18:03:10,957 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:03:10,957 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:03:10,957 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:03:10,957 - Model - INFO - Epoch 34 (34/100):
+2024-09-18 18:03:10,957 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:03:22,428 - Model - INFO - Train accuracy is: 0.98109
+2024-09-18 18:03:25,163 - Model - INFO - eval mIoU of K              0.708074
+2024-09-18 18:03:25,164 - Model - INFO - eval mIoU of KT             0.820878
+2024-09-18 18:03:25,164 - Model - INFO - Epoch 34 test Accuracy: 0.895592  Class avg mIOU: 0.764476   Inctance avg mIOU: 0.764476
+2024-09-18 18:03:25,164 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:03:25,164 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:03:25,164 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:03:25,165 - Model - INFO - Epoch 35 (35/100):
+2024-09-18 18:03:25,165 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:03:36,834 - Model - INFO - Train accuracy is: 0.98095
+2024-09-18 18:03:39,560 - Model - INFO - eval mIoU of K              0.671272
+2024-09-18 18:03:39,560 - Model - INFO - eval mIoU of KT             0.852582
+2024-09-18 18:03:39,560 - Model - INFO - Epoch 35 test Accuracy: 0.898445  Class avg mIOU: 0.761927   Inctance avg mIOU: 0.761927
+2024-09-18 18:03:39,561 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:03:39,561 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:03:39,561 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:03:39,561 - Model - INFO - Epoch 36 (36/100):
+2024-09-18 18:03:39,561 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:03:51,452 - Model - INFO - Train accuracy is: 0.98232
+2024-09-18 18:03:54,237 - Model - INFO - eval mIoU of K              0.689753
+2024-09-18 18:03:54,237 - Model - INFO - eval mIoU of KT             0.816526
+2024-09-18 18:03:54,238 - Model - INFO - Epoch 36 test Accuracy: 0.896362  Class avg mIOU: 0.753139   Inctance avg mIOU: 0.753139
+2024-09-18 18:03:54,238 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:03:54,238 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:03:54,238 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:03:54,238 - Model - INFO - Epoch 37 (37/100):
+2024-09-18 18:03:54,238 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:04:05,953 - Model - INFO - Train accuracy is: 0.98166
+2024-09-18 18:04:08,666 - Model - INFO - eval mIoU of K              0.681045
+2024-09-18 18:04:08,666 - Model - INFO - eval mIoU of KT             0.676781
+2024-09-18 18:04:08,667 - Model - INFO - Epoch 37 test Accuracy: 0.844055  Class avg mIOU: 0.678913   Inctance avg mIOU: 0.678913
+2024-09-18 18:04:08,667 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:04:08,667 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:04:08,667 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:04:08,667 - Model - INFO - Epoch 38 (38/100):
+2024-09-18 18:04:08,667 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:04:20,365 - Model - INFO - Train accuracy is: 0.98068
+2024-09-18 18:04:23,124 - Model - INFO - eval mIoU of K              0.687716
+2024-09-18 18:04:23,124 - Model - INFO - eval mIoU of KT             0.817838
+2024-09-18 18:04:23,124 - Model - INFO - Epoch 38 test Accuracy: 0.888733  Class avg mIOU: 0.752777   Inctance avg mIOU: 0.752777
+2024-09-18 18:04:23,124 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:04:23,125 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:04:23,125 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:04:23,125 - Model - INFO - Epoch 39 (39/100):
+2024-09-18 18:04:23,125 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:04:34,800 - Model - INFO - Train accuracy is: 0.98147
+2024-09-18 18:04:37,498 - Model - INFO - eval mIoU of K              0.687127
+2024-09-18 18:04:37,498 - Model - INFO - eval mIoU of KT             0.826700
+2024-09-18 18:04:37,498 - Model - INFO - Epoch 39 test Accuracy: 0.889679  Class avg mIOU: 0.756914   Inctance avg mIOU: 0.756914
+2024-09-18 18:04:37,498 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:04:37,498 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:04:37,498 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:04:37,499 - Model - INFO - Epoch 40 (40/100):
+2024-09-18 18:04:37,499 - Model - INFO - Learning rate:0.000500
+2024-09-18 18:04:49,198 - Model - INFO - Train accuracy is: 0.98325
+2024-09-18 18:04:51,911 - Model - INFO - eval mIoU of K              0.674822
+2024-09-18 18:04:51,911 - Model - INFO - eval mIoU of KT             0.834784
+2024-09-18 18:04:51,912 - Model - INFO - Epoch 40 test Accuracy: 0.890198  Class avg mIOU: 0.754803   Inctance avg mIOU: 0.754803
+2024-09-18 18:04:51,912 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:04:51,912 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:04:51,912 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:04:51,912 - Model - INFO - Epoch 41 (41/100):
+2024-09-18 18:04:51,912 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:05:03,752 - Model - INFO - Train accuracy is: 0.98355
+2024-09-18 18:05:06,518 - Model - INFO - eval mIoU of K              0.692138
+2024-09-18 18:05:06,519 - Model - INFO - eval mIoU of KT             0.815189
+2024-09-18 18:05:06,519 - Model - INFO - Epoch 41 test Accuracy: 0.889000  Class avg mIOU: 0.753663   Inctance avg mIOU: 0.753663
+2024-09-18 18:05:06,519 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:05:06,519 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:05:06,519 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:05:06,519 - Model - INFO - Epoch 42 (42/100):
+2024-09-18 18:05:06,519 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:05:18,354 - Model - INFO - Train accuracy is: 0.98505
+2024-09-18 18:05:21,069 - Model - INFO - eval mIoU of K              0.688059
+2024-09-18 18:05:21,069 - Model - INFO - eval mIoU of KT             0.832767
+2024-09-18 18:05:21,069 - Model - INFO - Epoch 42 test Accuracy: 0.892723  Class avg mIOU: 0.760413   Inctance avg mIOU: 0.760413
+2024-09-18 18:05:21,069 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:05:21,069 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:05:21,069 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:05:21,069 - Model - INFO - Epoch 43 (43/100):
+2024-09-18 18:05:21,069 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:05:32,899 - Model - INFO - Train accuracy is: 0.98530
+2024-09-18 18:05:35,645 - Model - INFO - eval mIoU of K              0.668868
+2024-09-18 18:05:35,645 - Model - INFO - eval mIoU of KT             0.835113
+2024-09-18 18:05:35,645 - Model - INFO - Epoch 43 test Accuracy: 0.896049  Class avg mIOU: 0.751991   Inctance avg mIOU: 0.751991
+2024-09-18 18:05:35,645 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:05:35,645 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:05:35,645 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:05:35,645 - Model - INFO - Epoch 44 (44/100):
+2024-09-18 18:05:35,645 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:05:47,700 - Model - INFO - Train accuracy is: 0.98593
+2024-09-18 18:05:50,437 - Model - INFO - eval mIoU of K              0.686151
+2024-09-18 18:05:50,437 - Model - INFO - eval mIoU of KT             0.849046
+2024-09-18 18:05:50,437 - Model - INFO - Epoch 44 test Accuracy: 0.900810  Class avg mIOU: 0.767598   Inctance avg mIOU: 0.767598
+2024-09-18 18:05:50,437 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:05:50,437 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:05:50,437 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:05:50,438 - Model - INFO - Epoch 45 (45/100):
+2024-09-18 18:05:50,438 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:06:02,416 - Model - INFO - Train accuracy is: 0.98388
+2024-09-18 18:06:05,111 - Model - INFO - eval mIoU of K              0.703573
+2024-09-18 18:06:05,111 - Model - INFO - eval mIoU of KT             0.828751
+2024-09-18 18:06:05,112 - Model - INFO - Epoch 45 test Accuracy: 0.896553  Class avg mIOU: 0.766162   Inctance avg mIOU: 0.766162
+2024-09-18 18:06:05,112 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:06:05,112 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:06:05,112 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:06:05,112 - Model - INFO - Epoch 46 (46/100):
+2024-09-18 18:06:05,112 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:06:17,012 - Model - INFO - Train accuracy is: 0.98550
+2024-09-18 18:06:19,770 - Model - INFO - eval mIoU of K              0.668585
+2024-09-18 18:06:19,770 - Model - INFO - eval mIoU of KT             0.832961
+2024-09-18 18:06:19,770 - Model - INFO - Epoch 46 test Accuracy: 0.887787  Class avg mIOU: 0.750773   Inctance avg mIOU: 0.750773
+2024-09-18 18:06:19,770 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:06:19,770 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:06:19,770 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:06:19,770 - Model - INFO - Epoch 47 (47/100):
+2024-09-18 18:06:19,770 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:06:31,427 - Model - INFO - Train accuracy is: 0.98535
+2024-09-18 18:06:34,492 - Model - INFO - eval mIoU of K              0.687589
+2024-09-18 18:06:34,493 - Model - INFO - eval mIoU of KT             0.834373
+2024-09-18 18:06:34,493 - Model - INFO - Epoch 47 test Accuracy: 0.893967  Class avg mIOU: 0.760981   Inctance avg mIOU: 0.760981
+2024-09-18 18:06:34,493 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:06:34,494 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:06:34,494 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:06:34,494 - Model - INFO - Epoch 48 (48/100):
+2024-09-18 18:06:34,494 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:06:46,413 - Model - INFO - Train accuracy is: 0.98536
+2024-09-18 18:06:49,181 - Model - INFO - eval mIoU of K              0.675228
+2024-09-18 18:06:49,181 - Model - INFO - eval mIoU of KT             0.842400
+2024-09-18 18:06:49,182 - Model - INFO - Epoch 48 test Accuracy: 0.894180  Class avg mIOU: 0.758814   Inctance avg mIOU: 0.758814
+2024-09-18 18:06:49,182 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:06:49,182 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:06:49,182 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:06:49,182 - Model - INFO - Epoch 49 (49/100):
+2024-09-18 18:06:49,182 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:07:01,122 - Model - INFO - Train accuracy is: 0.98467
+2024-09-18 18:07:03,867 - Model - INFO - eval mIoU of K              0.690250
+2024-09-18 18:07:03,867 - Model - INFO - eval mIoU of KT             0.826884
+2024-09-18 18:07:03,868 - Model - INFO - Epoch 49 test Accuracy: 0.892754  Class avg mIOU: 0.758567   Inctance avg mIOU: 0.758567
+2024-09-18 18:07:03,868 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:07:03,868 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:07:03,868 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:07:03,868 - Model - INFO - Epoch 50 (50/100):
+2024-09-18 18:07:03,868 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:07:15,806 - Model - INFO - Train accuracy is: 0.98510
+2024-09-18 18:07:18,529 - Model - INFO - eval mIoU of K              0.683096
+2024-09-18 18:07:18,529 - Model - INFO - eval mIoU of KT             0.832668
+2024-09-18 18:07:18,529 - Model - INFO - Epoch 50 test Accuracy: 0.891373  Class avg mIOU: 0.757882   Inctance avg mIOU: 0.757882
+2024-09-18 18:07:18,529 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:07:18,529 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:07:18,530 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:07:18,530 - Model - INFO - Epoch 51 (51/100):
+2024-09-18 18:07:18,530 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:07:30,268 - Model - INFO - Train accuracy is: 0.98553
+2024-09-18 18:07:32,970 - Model - INFO - eval mIoU of K              0.673901
+2024-09-18 18:07:32,971 - Model - INFO - eval mIoU of KT             0.752749
+2024-09-18 18:07:32,971 - Model - INFO - Epoch 51 test Accuracy: 0.866150  Class avg mIOU: 0.713325   Inctance avg mIOU: 0.713325
+2024-09-18 18:07:32,971 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:07:32,971 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:07:32,971 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:07:32,971 - Model - INFO - Epoch 52 (52/100):
+2024-09-18 18:07:32,971 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:07:44,784 - Model - INFO - Train accuracy is: 0.98547
+2024-09-18 18:07:47,494 - Model - INFO - eval mIoU of K              0.682124
+2024-09-18 18:07:47,494 - Model - INFO - eval mIoU of KT             0.840873
+2024-09-18 18:07:47,494 - Model - INFO - Epoch 52 test Accuracy: 0.893295  Class avg mIOU: 0.761499   Inctance avg mIOU: 0.761499
+2024-09-18 18:07:47,494 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:07:47,494 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:07:47,495 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:07:47,495 - Model - INFO - Epoch 53 (53/100):
+2024-09-18 18:07:47,495 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:07:59,682 - Model - INFO - Train accuracy is: 0.98544
+2024-09-18 18:08:02,413 - Model - INFO - eval mIoU of K              0.689274
+2024-09-18 18:08:02,413 - Model - INFO - eval mIoU of KT             0.874944
+2024-09-18 18:08:02,413 - Model - INFO - Epoch 53 test Accuracy: 0.907372  Class avg mIOU: 0.782109   Inctance avg mIOU: 0.782109
+2024-09-18 18:08:02,413 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:08:02,413 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:08:02,414 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:08:02,414 - Model - INFO - Epoch 54 (54/100):
+2024-09-18 18:08:02,414 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:08:13,966 - Model - INFO - Train accuracy is: 0.98643
+2024-09-18 18:08:16,664 - Model - INFO - eval mIoU of K              0.708056
+2024-09-18 18:08:16,664 - Model - INFO - eval mIoU of KT             0.854003
+2024-09-18 18:08:16,664 - Model - INFO - Epoch 54 test Accuracy: 0.907280  Class avg mIOU: 0.781029   Inctance avg mIOU: 0.781029
+2024-09-18 18:08:16,664 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:08:16,664 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:08:16,665 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:08:16,665 - Model - INFO - Epoch 55 (55/100):
+2024-09-18 18:08:16,665 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:08:28,490 - Model - INFO - Train accuracy is: 0.98666
+2024-09-18 18:08:31,204 - Model - INFO - eval mIoU of K              0.719505
+2024-09-18 18:08:31,206 - Model - INFO - eval mIoU of KT             0.831784
+2024-09-18 18:08:31,206 - Model - INFO - Epoch 55 test Accuracy: 0.900291  Class avg mIOU: 0.775645   Inctance avg mIOU: 0.775645
+2024-09-18 18:08:31,206 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:08:31,206 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:08:31,206 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:08:31,206 - Model - INFO - Epoch 56 (56/100):
+2024-09-18 18:08:31,206 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:08:43,005 - Model - INFO - Train accuracy is: 0.98648
+2024-09-18 18:08:45,739 - Model - INFO - eval mIoU of K              0.695567
+2024-09-18 18:08:45,740 - Model - INFO - eval mIoU of KT             0.843537
+2024-09-18 18:08:45,740 - Model - INFO - Epoch 56 test Accuracy: 0.900253  Class avg mIOU: 0.769552   Inctance avg mIOU: 0.769552
+2024-09-18 18:08:45,740 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:08:45,740 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:08:45,740 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:08:45,740 - Model - INFO - Epoch 57 (57/100):
+2024-09-18 18:08:45,740 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:08:57,121 - Model - INFO - Train accuracy is: 0.98642
+2024-09-18 18:08:59,814 - Model - INFO - eval mIoU of K              0.691707
+2024-09-18 18:08:59,815 - Model - INFO - eval mIoU of KT             0.838025
+2024-09-18 18:08:59,815 - Model - INFO - Epoch 57 test Accuracy: 0.895149  Class avg mIOU: 0.764866   Inctance avg mIOU: 0.764866
+2024-09-18 18:08:59,815 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:08:59,815 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:08:59,815 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:08:59,815 - Model - INFO - Epoch 58 (58/100):
+2024-09-18 18:08:59,815 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:09:11,322 - Model - INFO - Train accuracy is: 0.98623
+2024-09-18 18:09:14,029 - Model - INFO - eval mIoU of K              0.678307
+2024-09-18 18:09:14,030 - Model - INFO - eval mIoU of KT             0.864778
+2024-09-18 18:09:14,030 - Model - INFO - Epoch 58 test Accuracy: 0.905350  Class avg mIOU: 0.771543   Inctance avg mIOU: 0.771543
+2024-09-18 18:09:14,030 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:09:14,030 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:09:14,030 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:09:14,030 - Model - INFO - Epoch 59 (59/100):
+2024-09-18 18:09:14,031 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:09:25,912 - Model - INFO - Train accuracy is: 0.98532
+2024-09-18 18:09:28,606 - Model - INFO - eval mIoU of K              0.692667
+2024-09-18 18:09:28,606 - Model - INFO - eval mIoU of KT             0.835622
+2024-09-18 18:09:28,606 - Model - INFO - Epoch 59 test Accuracy: 0.895668  Class avg mIOU: 0.764145   Inctance avg mIOU: 0.764145
+2024-09-18 18:09:28,606 - Model - INFO - Best accuracy is: 0.92587
+2024-09-18 18:09:28,606 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:09:28,607 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:09:28,607 - Model - INFO - Epoch 60 (60/100):
+2024-09-18 18:09:28,607 - Model - INFO - Learning rate:0.000250
+2024-09-18 18:09:40,425 - Model - INFO - Train accuracy is: 0.98189
+2024-09-18 18:09:43,144 - Model - INFO - eval mIoU of K              0.668621
+2024-09-18 18:09:43,145 - Model - INFO - eval mIoU of KT             0.920939
+2024-09-18 18:09:43,145 - Model - INFO - Epoch 60 test Accuracy: 0.926247  Class avg mIOU: 0.794780   Inctance avg mIOU: 0.794780
+2024-09-18 18:09:43,145 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:09:43,145 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:09:43,145 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:09:43,145 - Model - INFO - Epoch 61 (61/100):
+2024-09-18 18:09:43,146 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:09:55,009 - Model - INFO - Train accuracy is: 0.98519
+2024-09-18 18:09:57,707 - Model - INFO - eval mIoU of K              0.700581
+2024-09-18 18:09:57,707 - Model - INFO - eval mIoU of KT             0.872813
+2024-09-18 18:09:57,708 - Model - INFO - Epoch 61 test Accuracy: 0.914726  Class avg mIOU: 0.786697   Inctance avg mIOU: 0.786697
+2024-09-18 18:09:57,708 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:09:57,708 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:09:57,708 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:09:57,708 - Model - INFO - Epoch 62 (62/100):
+2024-09-18 18:09:57,708 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:10:09,578 - Model - INFO - Train accuracy is: 0.98642
+2024-09-18 18:10:12,323 - Model - INFO - eval mIoU of K              0.694981
+2024-09-18 18:10:12,323 - Model - INFO - eval mIoU of KT             0.833434
+2024-09-18 18:10:12,324 - Model - INFO - Epoch 62 test Accuracy: 0.894211  Class avg mIOU: 0.764208   Inctance avg mIOU: 0.764208
+2024-09-18 18:10:12,324 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:10:12,324 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:10:12,324 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:10:12,324 - Model - INFO - Epoch 63 (63/100):
+2024-09-18 18:10:12,324 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:10:24,268 - Model - INFO - Train accuracy is: 0.98633
+2024-09-18 18:10:27,046 - Model - INFO - eval mIoU of K              0.689864
+2024-09-18 18:10:27,046 - Model - INFO - eval mIoU of KT             0.834042
+2024-09-18 18:10:27,046 - Model - INFO - Epoch 63 test Accuracy: 0.893814  Class avg mIOU: 0.761953   Inctance avg mIOU: 0.761953
+2024-09-18 18:10:27,046 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:10:27,046 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:10:27,047 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:10:27,047 - Model - INFO - Epoch 64 (64/100):
+2024-09-18 18:10:27,047 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:10:38,751 - Model - INFO - Train accuracy is: 0.98718
+2024-09-18 18:10:41,518 - Model - INFO - eval mIoU of K              0.691715
+2024-09-18 18:10:41,518 - Model - INFO - eval mIoU of KT             0.845909
+2024-09-18 18:10:41,518 - Model - INFO - Epoch 64 test Accuracy: 0.898712  Class avg mIOU: 0.768812   Inctance avg mIOU: 0.768812
+2024-09-18 18:10:41,519 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:10:41,519 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:10:41,519 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:10:41,519 - Model - INFO - Epoch 65 (65/100):
+2024-09-18 18:10:41,519 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:10:53,573 - Model - INFO - Train accuracy is: 0.98596
+2024-09-18 18:10:56,293 - Model - INFO - eval mIoU of K              0.694099
+2024-09-18 18:10:56,294 - Model - INFO - eval mIoU of KT             0.850537
+2024-09-18 18:10:56,294 - Model - INFO - Epoch 65 test Accuracy: 0.903816  Class avg mIOU: 0.772318   Inctance avg mIOU: 0.772318
+2024-09-18 18:10:56,294 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:10:56,294 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:10:56,294 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:10:56,294 - Model - INFO - Epoch 66 (66/100):
+2024-09-18 18:10:56,294 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:11:08,161 - Model - INFO - Train accuracy is: 0.98687
+2024-09-18 18:11:10,926 - Model - INFO - eval mIoU of K              0.691605
+2024-09-18 18:11:10,926 - Model - INFO - eval mIoU of KT             0.872889
+2024-09-18 18:11:10,926 - Model - INFO - Epoch 66 test Accuracy: 0.909103  Class avg mIOU: 0.782247   Inctance avg mIOU: 0.782247
+2024-09-18 18:11:10,926 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:11:10,926 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:11:10,926 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:11:10,926 - Model - INFO - Epoch 67 (67/100):
+2024-09-18 18:11:10,927 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:11:22,802 - Model - INFO - Train accuracy is: 0.98717
+2024-09-18 18:11:25,530 - Model - INFO - eval mIoU of K              0.693851
+2024-09-18 18:11:25,530 - Model - INFO - eval mIoU of KT             0.842297
+2024-09-18 18:11:25,531 - Model - INFO - Epoch 67 test Accuracy: 0.898659  Class avg mIOU: 0.768074   Inctance avg mIOU: 0.768074
+2024-09-18 18:11:25,531 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:11:25,531 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:11:25,531 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:11:25,531 - Model - INFO - Epoch 68 (68/100):
+2024-09-18 18:11:25,531 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:11:37,174 - Model - INFO - Train accuracy is: 0.98752
+2024-09-18 18:11:39,880 - Model - INFO - eval mIoU of K              0.682625
+2024-09-18 18:11:39,881 - Model - INFO - eval mIoU of KT             0.835828
+2024-09-18 18:11:39,881 - Model - INFO - Epoch 68 test Accuracy: 0.892532  Class avg mIOU: 0.759226   Inctance avg mIOU: 0.759226
+2024-09-18 18:11:39,882 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:11:39,882 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:11:39,882 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:11:39,882 - Model - INFO - Epoch 69 (69/100):
+2024-09-18 18:11:39,882 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:11:51,718 - Model - INFO - Train accuracy is: 0.98789
+2024-09-18 18:11:54,480 - Model - INFO - eval mIoU of K              0.681154
+2024-09-18 18:11:54,480 - Model - INFO - eval mIoU of KT             0.848390
+2024-09-18 18:11:54,481 - Model - INFO - Epoch 69 test Accuracy: 0.897644  Class avg mIOU: 0.764772   Inctance avg mIOU: 0.764772
+2024-09-18 18:11:54,481 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:11:54,481 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:11:54,481 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:11:54,481 - Model - INFO - Epoch 70 (70/100):
+2024-09-18 18:11:54,481 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:12:06,269 - Model - INFO - Train accuracy is: 0.98813
+2024-09-18 18:12:09,012 - Model - INFO - eval mIoU of K              0.673058
+2024-09-18 18:12:09,013 - Model - INFO - eval mIoU of KT             0.839646
+2024-09-18 18:12:09,013 - Model - INFO - Epoch 70 test Accuracy: 0.891289  Class avg mIOU: 0.756352   Inctance avg mIOU: 0.756352
+2024-09-18 18:12:09,013 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:12:09,013 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:12:09,013 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:12:09,013 - Model - INFO - Epoch 71 (71/100):
+2024-09-18 18:12:09,013 - Model - INFO - Learning rate:0.000125
+2024-09-18 18:12:20,789 - Model - INFO - Train accuracy is: 0.98774
+2024-09-18 18:12:23,473 - Model - INFO - eval mIoU of K              0.680058
+2024-09-18 18:12:23,474 - Model - INFO - eval mIoU of KT             0.842204
+2024-09-18 18:12:23,474 - Model - INFO - Epoch 71 test Accuracy: 0.894348  Class avg mIOU: 0.761131   Inctance avg mIOU: 0.761131
+2024-09-18 18:12:23,474 - Model - INFO - Best accuracy is: 0.92625
+2024-09-18 18:12:23,474 - Model - INFO - Best class avg mIOU is: 0.79854
+2024-09-18 18:12:23,474 - Model - INFO - Best inctance avg mIOU is: 0.79854
+2024-09-18 18:12:23,474 - Model - INFO - Epoch 72 (72/100):
+2024-09-18 18:12:23,474 - Model - INFO - Learning rate:0.000125
