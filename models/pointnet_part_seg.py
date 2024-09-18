@@ -26,7 +26,7 @@ class get_model(nn.Module):
         self.bn4 = nn.BatchNorm1d(512)
         self.bn5 = nn.BatchNorm1d(2048)
         self.fstn = STNkd(k=128)
-        self.convs1 = torch.nn.Conv1d(4944, 256, 1)
+        self.convs1 = torch.nn.Conv1d(4930, 256, 1)
         self.convs2 = torch.nn.Conv1d(256, 256, 1)
         self.convs3 = torch.nn.Conv1d(256, 128, 1)
         self.convs4 = torch.nn.Conv1d(128, part_num, 1)
@@ -61,7 +61,7 @@ class get_model(nn.Module):
         out_max = out_max.view(-1, 2048)
 
         out_max = torch.cat([out_max,label.squeeze(1)],1)
-        expand = out_max.view(-1, 2048+16, 1).repeat(1, 1, N)
+        expand = out_max.view(-1, 2048+2, 1).repeat(1, 1, N)
         concat = torch.cat([expand, out1, out2, out3, out4, out5], 1)
         net = F.relu(self.bns1(self.convs1(concat)))
         net = F.relu(self.bns2(self.convs2(net)))

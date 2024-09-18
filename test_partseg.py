@@ -16,12 +16,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-seg_classes = {'Earphone': [16, 17, 18], 'Motorbike': [30, 31, 32, 33, 34, 35], 'Rocket': [41, 42, 43],
-               'Car': [8, 9, 10, 11], 'Laptop': [28, 29], 'Cap': [6, 7], 'Skateboard': [44, 45, 46], 'Mug': [36, 37],
-               'Guitar': [19, 20, 21], 'Bag': [4, 5], 'Lamp': [24, 25, 26, 27], 'Table': [47, 48, 49],
-               'Airplane': [0, 1, 2, 3], 'Pistol': [38, 39, 40], 'Chair': [12, 13, 14, 15], 'Knife': [22, 23]}
+seg_classes = {"K": [0, 1, 2], "KT": [3, 4, 5, 6]}
 
-seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
+seg_label_to_cat = {}  # {0:K, 1:K, ...6:KT}
 for cat in seg_classes.keys():
     for label in seg_classes[cat]:
         seg_label_to_cat[label] = cat
@@ -38,7 +35,7 @@ def to_categorical(y, num_classes):
 def parse_args():
     '''PARAMETERS'''
     parser = argparse.ArgumentParser('PointNet')
-    parser.add_argument('--batch_size', type=int, default=24, help='batch size in testing')
+    parser.add_argument('--batch_size', type=int, default=16, help='batch size in testing')
     parser.add_argument('--gpu', type=str, default='0', help='specify gpu device')
     parser.add_argument('--num_point', type=int, default=2048, help='point Number')
     parser.add_argument('--log_dir', type=str, required=True, help='experiment root')
@@ -68,13 +65,13 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    root = 'data/shapenetcore_partanno_segmentation_benchmark_v0_normal/'
+    root = 'data/SteelShapeNet/'
 
     TEST_DATASET = PartNormalDataset(root=root, npoints=args.num_point, split='test', normal_channel=args.normal)
     testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=4)
     log_string("The number of test data is: %d" % len(TEST_DATASET))
-    num_classes = 16
-    num_part = 50
+    num_classes = 2
+    num_part = 7
 
     '''MODEL LOADING'''
     model_name = os.listdir(experiment_dir + '/logs')[0].split('.')[0]
@@ -90,7 +87,7 @@ def main(args):
         total_seen_class = [0 for _ in range(num_part)]
         total_correct_class = [0 for _ in range(num_part)]
         shape_ious = {cat: [] for cat in seg_classes.keys()}
-        seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
+        seg_label_to_cat = {}  # {0:K, 1:K, ...6:KT}
 
         for cat in seg_classes.keys():
             for label in seg_classes[cat]:
@@ -150,7 +147,7 @@ def main(args):
         mean_shape_ious = np.mean(list(shape_ious.values()))
         test_metrics['accuracy'] = total_correct / float(total_seen)
         test_metrics['class_avg_accuracy'] = np.mean(
-            np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
+            np.array(total_correct_class) / np.array(total_seen_class, dtype=float))
         for cat in sorted(shape_ious.keys()):
             log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
         test_metrics['class_avg_iou'] = mean_shape_ious

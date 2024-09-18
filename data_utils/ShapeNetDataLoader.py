@@ -38,6 +38,8 @@ class PartNormalDataset(Dataset):
             train_ids = set([str(d.split("/")[2]) for d in json.load(f)])  # {'1001','1002',...,'2064'}
         with open(os.path.join(self.root, 'train_test_split', 'shuffled_test_file_list.json'), 'r') as f:
             test_ids = set([str(d.split('/')[2]) for d in json.load(f)])  # {'1065','1066',...,'2080'}
+        with open(os.path.join(self.root, 'train_test_split', 'shuffled_view_file_list.json'), 'r') as f:
+            view_ids = set([str(d.split('/')[2]) for d in json.load(f)])  # {'1065'}
         for item in self.cat:
             # print('category', item)
             self.meta[item] = []  # 存储每个txt文件的具体目录地址
@@ -48,6 +50,8 @@ class PartNormalDataset(Dataset):
                 fns = [fn for fn in fns if fn[0:-4] in train_ids]  # ['1001', '1002', ..., '1080']
             elif split == 'test':
                 fns = [fn for fn in fns if fn[0:-4] in test_ids]
+            elif split == "view":
+                fns = [fn for fn in fns if fn[0:-4] in view_ids]
             else:
                 print('Unknown split: %s. Exiting..' % (split))
                 exit(-1)
