@@ -71,6 +71,35 @@ def parse_args():
     )
     return parser.parse_args()
 
+def save_point_cloud_with_labels(points, labels, file_name="output_point_cloud.txt"):
+    """将点云和标签保存到TXT文件中"""
+    # 确保标签是一个列向量
+    labels = labels.reshape(-1, 1)
+    # 水平堆叠点坐标和标签
+    point_cloud_with_labels = np.hstack((points, labels))
+    # 保存到TXT文件，每行格式为: x y z label
+    np.savetxt(
+        file_name,
+        point_cloud_with_labels,
+        fmt="%f %f %f %d",
+        comments="",
+    )
+
+
+def save_groundtruth_labels(points, ground_truth_labels, file_name="groundtruth.txt"):
+    """将点云和Ground Truth标签保存到TXT文件中"""
+    # 确保标签是一个列向量
+    ground_truth_labels = ground_truth_labels.reshape(-1, 1)
+    # 水平堆叠点坐标和标签
+    point_cloud_with_ground_truth = np.hstack((points, ground_truth_labels))
+    # 保存到TXT文件，每行格式为: x y z label
+    np.savetxt(
+        file_name,
+        point_cloud_with_ground_truth,
+        fmt="%f %f %f %d",
+        comments="",
+    )
+
 
 def main(args):
     """HYPER PARAMETER"""
@@ -117,7 +146,9 @@ def main(args):
             points = points.transpose(2, 1)
 
             # 转换 PyTorch tensor 为 numpy 数组
-            points_np = points[0, :3, :].cpu().numpy().T  # 获取第一批次并将其转换为 numpy
+            points_np = (
+                points[0, :3, :].cpu().numpy().T
+            )  # 获取第一批次并将其转换为 numpy
 
             vote_pool = torch.zeros(target.size()[0], target.size()[1], num_part).cuda()
 
@@ -129,22 +160,29 @@ def main(args):
             cur_pred_val = seg_pred.cpu().data.numpy()
             cur_pred_val_logits = cur_pred_val
             cur_pred_val = np.zeros((cur_batch_size, NUM_POINT)).astype(np.int32)
-            target = target.cpu().data.numpy()
+            target_np = target.cpu().data.numpy()  # 转换 Ground Truth 标签为 NumPy 数组
 
             for i in range(cur_batch_size):
-                cat = seg_label_to_cat[target[i, 0]]
+                cat = seg_label_to_cat[target_np[i, 0]]
                 logits = cur_pred_val_logits[i, :, :]
                 cur_pred_val[i, :] = (
                     np.argmax(logits[:, seg_classes[cat]], 1) + seg_classes[cat][0]
                 )
 
-            # 渲染点云
+            # 渲染点云并保存 Ground Truth 和预测标签
             for i in range(cur_batch_size):
                 points_np = points[i, :3, :].cpu().numpy().T  # 获取当前批次的点云
                 pred_labels = cur_pred_val[i, :]  # 获取预测的分割标签
+                ground_truth_labels = target_np[i, :]  # 获取真实的分割标签
                 visualize_point_cloud_with_labels(
                     points_np, pred_labels
                 )  # 显示带有标签的点云
+                save_point_cloud_with_labels(
+                    points_np, pred_labels, file_name="predict.txt"
+                )  # 保存预测结果
+                save_groundtruth_labels(
+                    points_np, ground_truth_labels, file_name="groundtruth.txt"
+                )  # 保存 Ground Truth
 
 
 if __name__ == "__main__":
