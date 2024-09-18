@@ -1,0 +1,9 @@
+2024-09-18 19:01:44,133 - Model - INFO - PARAMETER ...
+2024-09-18 19:01:44,133 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_ssg', normal=False, num_point=2048, num_votes=3)
+2024-09-18 19:01:44,135 - Model - INFO - The number of test data is: 64
+2024-09-18 19:01:49,491 - Model - INFO - eval mIoU of K              0.757575
+2024-09-18 19:01:49,493 - Model - INFO - eval mIoU of KT             0.838909
+2024-09-18 19:01:49,493 - Model - INFO - Accuracy is: 0.92596
+2024-09-18 19:01:49,493 - Model - INFO - Class avg accuracy is: 0.86965
+2024-09-18 19:01:49,493 - Model - INFO - Class avg mIOU is: 0.79824
+2024-09-18 19:01:49,493 - Model - INFO - Inctance avg mIOU is: 0.79824
