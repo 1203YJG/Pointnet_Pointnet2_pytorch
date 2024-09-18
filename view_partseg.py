@@ -58,7 +58,7 @@ def parse_args():
         "--batch_size", type=int, default=1, help="batch size in viewing"
     )
     parser.add_argument("--gpu", type=str, default="0", help="specify gpu device")
-    parser.add_argument("--num_point", type=int, default=2048, help="point Number")
+    parser.add_argument("--num_point", type=int, default=4096, help="point Number")
     parser.add_argument("--log_dir", type=str, default='pointnet2_part_seg_msg', help="experiment root")
     parser.add_argument(
         "--normal", action="store_true", default=False, help="use normals"
